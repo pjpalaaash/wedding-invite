@@ -1,0 +1,216 @@
+╔══════════════════════════════════════════════════════════════════╗
+║           WEDDING WEBSITE - QUICK START GUIDE                    ║
+║              Karan & Nisha Clone - Full Package                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📦 PACKAGE CONTENTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- README.md              (Complete documentation)
+- setup.sh              (Automated setup script for Mac/Linux)
+- .env.example          (Environment variables template)
+- src/                  (All source code and components)
+- public/               (Static files)
+- package.json          (Dependencies list)
+- Configuration files   (Tailwind, CRACO, jsconfig)
+
+
+🚀 QUICK START (3 STEPS):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  EXTRACT THE PACKAGE
+   
+   On Mac/Linux:
+   $ tar -xzf wedding-website-full-package.tar.gz
+   $ cd wedding-website-full-package
+   
+   On Windows:
+   - Right-click → Extract All
+   - Open the extracted folder
+
+
+2️⃣  INSTALL DEPENDENCIES
+   
+   Option A - Automated (Mac/Linux):
+   $ chmod +x setup.sh
+   $ ./setup.sh
+   
+   Option B - Manual (All platforms):
+   $ yarn install
+   (If you don't have Yarn: npm install -g yarn)
+
+
+3️⃣  START THE WEBSITE
+   
+   $ yarn start
+   
+   🌐 Opens automatically at: http://localhost:3000
+
+
+✅ THAT'S IT! Your wedding website is now running!
+
+
+📝 CUSTOMIZATION (Quick Guide):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. WEDDING DETAILS:
+   📁 Edit: src/data/mock.js
+   ✏️  Change: Names, dates, venue, events, contact info
+
+2. PHOTOS:
+   📁 Edit: src/data/mock.js (gallery array)
+   ✏️  Replace: URLs with your own image links
+
+3. COLORS:
+   📁 Edit: src/index.css
+   ✏️  Find & Replace: #B8956A (current golden color)
+
+4. HERO BACKGROUND:
+   📁 Edit: src/components/HeroSection.jsx
+   ✏️  Line: backgroundImage property
+
+5. GOOGLE MAPS:
+   📁 Edit: src/components/VenueSection.jsx
+   ✏️  Replace: iframe src with your venue's embed link
+
+
+🎨 KEY FEATURES INCLUDED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Full-screen hero with background image
+✓ Live countdown timer (updates every second)
+✓ Wedding ceremony details section
+✓ 6 wedding events (Haldi, Mehandi, Sangeet, etc.)
+✓ Bride & Groom profile cards
+✓ Photo gallery with carousel navigation
+✓ Venue section with Google Maps integration
+✓ RSVP and contact information
+✓ Responsive design (mobile, tablet, desktop)
+✓ Smooth scrolling and animations
+✓ Music player button (ready for audio integration)
+
+
+🔧 PREREQUISITES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Required:
+• Node.js v16 or higher    → https://nodejs.org/
+• Yarn package manager     → npm install -g yarn
+
+Optional:
+• Code editor (VS Code recommended) → https://code.visualstudio.com/
+
+
+📱 RESPONSIVE DESIGN:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Desktop (1920px+)        - Full experience
+✓ Laptop (1024-1919px)     - Optimized layout
+✓ Tablet (768-1023px)      - Touch-friendly
+✓ Mobile (320-767px)       - Mobile-first design
+
+
+🌐 DEPLOYMENT OPTIONS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. NETLIFY (Easiest - Recommended):
+   $ yarn build
+   → Drag & drop 'build' folder to netlify.com
+   ✓ Free SSL, Custom domain, Instant deploy
+
+2. VERCEL:
+   → Sign up at vercel.com
+   → Import project
+   → Deploy in one click
+
+3. GITHUB PAGES:
+   $ yarn add gh-pages
+   → Add scripts to package.json (see README.md)
+   $ yarn deploy
+
+
+🐛 TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: Port 3000 already in use
+Solution: $ PORT=3001 yarn start
+
+Problem: "Module not found" error
+Solution: $ rm -rf node_modules && yarn install
+
+Problem: Countdown shows all zeros
+Solution: Check targetDate in src/data/mock.js
+          Format: "2025-10-22T19:00:00+05:30"
+
+Problem: Images not loading
+Solution: Check image URLs in src/data/mock.js
+          Use absolute URLs (https://...)
+
+
+📚 FILE STRUCTURE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+wedding-website/
+├── README.md                    ← Full documentation
+├── setup.sh                     ← Auto setup script
+├── .env.example                 ← Environment template
+├── package.json                 ← Dependencies
+├── src/
+│   ├── components/              ← All React components
+│   │   ├── HeroSection.jsx
+│   │   ├── CountdownSection.jsx
+│   │   ├── GallerySection.jsx
+│   │   └── ... (9 more sections)
+│   ├── data/
+│   │   └── mock.js              ← ⭐ CUSTOMIZE THIS!
+│   ├── App.js                   ← Main app
+│   └── index.css                ← Global styles
+└── public/                      ← Static files
+
+
+💡 PRO TIPS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Use high-quality images (min 1920px width for hero)
+2. Optimize images before adding (use tinypng.com)
+3. Test on mobile devices using browser dev tools
+4. Set wedding date in future for countdown to work
+5. Get Google Maps embed link from maps.google.com
+6. Add your own music file in public/ folder
+7. Test website on multiple browsers
+8. Use custom domain for professional look
+9. Share the link with guests via WhatsApp/Email
+10. Keep the website updated with latest event details
+
+
+🎵 ADDING BACKGROUND MUSIC:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Add your audio file: public/music.mp3
+2. Edit: src/components/HeroSection.jsx
+3. Add audio implementation (see README.md for code)
+
+
+🎨 TECHNOLOGIES USED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• React 19              - Latest React framework
+• Tailwind CSS          - Utility-first styling
+• Shadcn UI             - Beautiful components
+• Lucide Icons          - Modern icon library
+• React Router          - Page navigation
+
+
+📞 SUPPORT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Read README.md for detailed documentation
+2. Check the troubleshooting section
+3. Ensure Node.js and Yarn are properly installed
+4. All data is in src/data/mock.js - start there!
+
+
+═══════════════════════════════════════════════════════════════════
+
+      🎉 ENJOY YOUR BEAUTIFUL WEDDING WEBSITE! 💍❤️
+
+═══════════════════════════════════════════════════════════════════
+
+Need help? All documentation is in README.md
+Want to customize? Start with src/data/mock.js
+
+Happy Wedding! 🎊
