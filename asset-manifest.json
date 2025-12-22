@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "./static/css/main.335840f2.css",
+    "main.js": "./static/js/main.fbf7275e.js",
+    "static/media/6.png": "./static/media/6.f5387257a76415b6fd58.png",
+    "static/media/mother.jpeg": "./static/media/mother.26d40790c46f25cfb6ff.jpeg",
+    "static/media/carnival.png": "./static/media/carnival.1c592e254ca5b59f1fae.png",
+    "static/media/mehendi.png": "./static/media/mehendi.fce3bc633f9aaf78da98.png",
+    "static/media/haldi.png": "./static/media/haldi.165366f887b55c5b8299.png",
+    "static/media/varmala.png": "./static/media/varmala.654231cbeaf6259c3125.png",
+    "static/media/sangeet.png": "./static/media/sangeet.1be6cf38be4eb0869f8a.png",
+    "static/media/ring.png": "./static/media/ring.558d16f196cd30d0d574.png",
+    "static/media/Groom.jpeg": "./static/media/Groom.804d9231bb28c2369691.jpeg",
+    "static/media/sister.jpeg": "./static/media/sister.b9b50751fc67865fe732.jpeg",
+    "static/media/daadi.jpeg": "./static/media/daadi.bc37f476edb5b1f7ec43.jpeg",
+    "static/media/father.jpeg": "./static/media/father.e910639c93b48f0606e9.jpeg",
+    "static/media/Bride.jpeg": "./static/media/Bride.8d9406769a6ec9682c1e.jpeg",
+    "index.html": "./index.html",
+    "main.335840f2.css.map": "./static/css/main.335840f2.css.map",
+    "main.fbf7275e.js.map": "./static/js/main.fbf7275e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.335840f2.css",
+    "static/js/main.fbf7275e.js"
+  ]
+}

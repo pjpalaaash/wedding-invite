@@ -1,0 +1,135 @@
+╔══════════════════════════════════════════════════════════════════╗
+║            WEDDING WEBSITE - COMPLETE FILE LIST                   ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📦 DOWNLOADABLE PACKAGES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. wedding-website-DOWNLOAD.tar.gz  (36 KB) - For Mac/Linux
+2. wedding-website-DOWNLOAD.zip     (67 KB) - For Windows
+
+Both contain the exact same files!
+
+
+📂 PACKAGE CONTENTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📄 DOCUMENTATION FILES:
+  ├── QUICK_START.txt           - Quick reference guide
+  ├── README.md                 - Complete documentation
+  └── setup.sh                  - Automated setup script
+
+⚙️ CONFIGURATION FILES:
+  ├── .env.example              - Environment variables
+  ├── package.json              - Dependencies & scripts
+  ├── tailwind.config.js        - Tailwind CSS config
+  ├── craco.config.js           - Build configuration
+  └── jsconfig.json             - JavaScript config
+
+📁 SOURCE CODE (src/):
+  
+  📂 components/
+    ├── HeroSection.jsx         - Full-screen hero with background
+    ├── CountdownSection.jsx    - Live countdown timer
+    ├── CeremonySection.jsx     - Wedding ceremony details
+    ├── EventsSection.jsx       - 6 wedding events cards
+    ├── KnowUsSection.jsx       - Bride & Groom profiles
+    ├── GallerySection.jsx      - Photo carousel gallery
+    ├── VenueSection.jsx        - Venue with Google Maps
+    ├── RSVPSection.jsx         - RSVP information
+    ├── ContactSection.jsx      - Contact details
+    ├── Footer.jsx              - Footer section
+    ├── Divider.jsx             - Decorative divider
+    └── ui/                     - 40+ Shadcn UI components
+  
+  📂 data/
+    └── mock.js                 - ⭐ WEDDING DATA (Customize!)
+  
+  📂 hooks/
+    └── use-toast.js            - Toast notifications
+  
+  📂 lib/
+    └── utils.js                - Utility functions
+  
+  📄 Root Files:
+    ├── App.js                  - Main application
+    ├── App.css                 - Custom animations
+    ├── index.js                - Entry point
+    └── index.css               - Global styles + Tailwind
+
+📁 PUBLIC FILES (public/):
+  ├── index.html                - HTML template
+  ├── favicon.ico               - Website icon
+  └── manifest.json             - PWA manifest
+
+
+🎯 KEY FILES TO CUSTOMIZE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Priority 1 - MUST CUSTOMIZE:
+  1. src/data/mock.js           - All wedding information
+     • Couple names
+     • Wedding date & time
+     • Venue details
+     • Event schedule
+     • Contact information
+
+Priority 2 - SHOULD CUSTOMIZE:
+  2. src/components/HeroSection.jsx
+     • Background image URL (line ~20)
+  
+  3. src/data/mock.js (gallery array)
+     • Photo gallery images
+  
+  4. src/components/KnowUsSection.jsx
+     • Bride & Groom profile pictures
+
+Priority 3 - OPTIONAL CUSTOMIZATION:
+  5. src/index.css
+     • Color theme (#B8956A - golden)
+  
+  6. src/components/VenueSection.jsx
+     • Google Maps embed URL
+
+
+📊 STATISTICS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Total Components:     13 custom + 40 UI components
+Total Lines of Code:  ~3,500 lines
+Technologies Used:    React 19, Tailwind CSS, Shadcn UI
+Responsive Breakpoints: 4 (mobile, tablet, laptop, desktop)
+Sections:            10 main sections
+Interactive Elements: Carousel, Countdown, Scroll effects
+
+
+🚀 QUICK ACCESS PATHS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If files are in: /app/frontend/
+
+Wedding Data:        /app/frontend/src/data/mock.js
+Main App:            /app/frontend/src/App.js
+Hero Component:      /app/frontend/src/components/HeroSection.jsx
+Gallery:             /app/frontend/src/components/GallerySection.jsx
+Styles:              /app/frontend/src/index.css
+Dependencies:        /app/frontend/package.json
+
+
+📥 HOW TO USE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Download: wedding-website-DOWNLOAD.tar.gz or .zip
+2. Extract the archive
+3. Read: QUICK_START.txt (inside package)
+4. Customize: src/data/mock.js
+5. Install: yarn install
+6. Run: yarn start
+7. Deploy: yarn build
+
+
+═══════════════════════════════════════════════════════════════════
+
+           ALL FILES ARE READY IN /tmp/ DIRECTORY
+
+═══════════════════════════════════════════════════════════════════

@@ -1,0 +1,153 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                  WEDDING WEBSITE - DOWNLOAD GUIDE                 ║
+║                     How to Get Your Files                        ║
+╚══════════════════════════════════════════════════════════════════╝
+
+🎯 TWO DOWNLOAD OPTIONS AVAILABLE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 OPTION 1: TAR.GZ (For Mac/Linux users)
+   File: wedding-website-DOWNLOAD.tar.gz
+   Size: ~36 KB
+   Location: /tmp/wedding-website-DOWNLOAD.tar.gz
+
+📦 OPTION 2: ZIP (For Windows users)
+   File: wedding-website-DOWNLOAD.zip
+   Size: ~67 KB
+   Location: /tmp/wedding-website-DOWNLOAD.zip
+
+
+📥 HOW TO DOWNLOAD FROM THIS ENVIRONMENT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+METHOD 1: Direct Copy Command
+Run this command to copy files to a location you can access:
+
+For TAR.GZ (Mac/Linux):
+$ cp /tmp/wedding-website-DOWNLOAD.tar.gz ~/Desktop/
+
+For ZIP (Windows/All):
+$ cp /tmp/wedding-website-DOWNLOAD.zip ~/Desktop/
+
+
+METHOD 2: Using Cat and Redirect
+If you're accessing via terminal/SSH:
+
+$ cat /tmp/wedding-website-DOWNLOAD.tar.gz > wedding-website.tar.gz
+
+
+METHOD 3: File Browser
+If you have file browser access:
+1. Navigate to /tmp/
+2. Find: wedding-website-DOWNLOAD.tar.gz or .zip
+3. Right-click → Download/Copy
+
+
+🔓 EXTRACTING THE FILES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Mac/Linux (TAR.GZ):
+$ tar -xzf wedding-website-DOWNLOAD.tar.gz
+$ cd wedding-website/
+
+Windows (ZIP):
+1. Right-click on wedding-website-DOWNLOAD.zip
+2. Select "Extract All"
+3. Choose destination folder
+4. Open the extracted folder
+
+
+📂 WHAT'S INCLUDED IN THE PACKAGE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ QUICK_START.txt          - Quick reference guide (you're reading it!)
+✓ README.md                - Complete documentation (70+ pages)
+✓ setup.sh                 - Automated setup script
+✓ .env.example             - Environment variables template
+✓ src/                     - All source code
+  ├── components/          - 13 React components
+  ├── data/mock.js         - ⭐ Wedding data (CUSTOMIZE THIS!)
+  ├── hooks/               - Custom hooks
+  └── lib/                 - Utility functions
+✓ public/                  - Static files
+✓ package.json             - Dependencies list
+✓ tailwind.config.js       - Tailwind CSS configuration
+✓ craco.config.js          - Build configuration
+✓ jsconfig.json            - JavaScript config
+
+
+🚀 AFTER EXTRACTION - NEXT STEPS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open terminal in the extracted folder
+2. Run: yarn install
+3. Run: yarn start
+4. Website opens at: http://localhost:3000
+
+For detailed steps, see QUICK_START.txt inside the package!
+
+
+💡 IMPORTANT NOTES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  Prerequisites Required:
+   • Node.js v16+ (Download: https://nodejs.org/)
+   • Yarn package manager (Install: npm install -g yarn)
+
+⭐ First File to Customize:
+   • src/data/mock.js - Contains ALL wedding information
+
+📝 Documentation:
+   • Quick Start: QUICK_START.txt (inside package)
+   • Full Guide: README.md (inside package)
+
+🎨 Website Features:
+   • Responsive design (mobile, tablet, desktop)
+   • Live countdown timer
+   • Photo gallery carousel
+   • Google Maps integration
+   • 13 different sections
+   • Beautiful animations
+
+
+🌐 ALTERNATIVE: VIEW FILES INDIVIDUALLY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If you can't download the archive, you can view/copy files individually:
+
+Key files to copy:
+1. /app/frontend/src/data/mock.js        (Wedding data)
+2. /app/frontend/src/App.js              (Main app)
+3. /app/frontend/src/components/*.jsx    (All components)
+4. /app/frontend/package.json            (Dependencies)
+5. /app/frontend/tailwind.config.js      (Styling config)
+
+
+📞 NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Common Issues:
+
+Q: Can't find the downloaded file?
+A: Check your Downloads folder or Desktop
+
+Q: "tar: command not found" on Windows?
+A: Use the ZIP version instead
+
+Q: How to customize the website?
+A: Start with src/data/mock.js after extraction
+
+Q: Website not starting?
+A: Ensure Node.js and Yarn are installed first
+
+
+═══════════════════════════════════════════════════════════════════
+
+                PACKAGE FILES ARE READY TO DOWNLOAD!
+
+      Files Location: /tmp/wedding-website-DOWNLOAD.*
+      Choose: .tar.gz (Mac/Linux) or .zip (Windows)
+
+═══════════════════════════════════════════════════════════════════
+
+Happy Wedding! 🎉💍❤️
