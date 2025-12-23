@@ -1,7 +1,11 @@
 {
   "files": {
-    "main.css": "./static/css/main.335840f2.css",
-    "main.js": "./static/js/main.fbf7275e.js",
+    "main.css": "./static/css/main.f69c76b0.css",
+    "main.js": "./static/js/main.caa118c9.js",
+    "static/media/3.png": "./static/media/3.3449713a5cf9e52088a6.png",
+    "static/media/7.png": "./static/media/7.032092868605603a0636.png",
+    "static/media/14.JPG": "./static/media/14.adde2d73a884ba0ca1a3.JPG",
+    "static/media/1.png": "./static/media/1.8ee26e432c01d02fae08.png",
     "static/media/6.png": "./static/media/6.f5387257a76415b6fd58.png",
     "static/media/mother.jpeg": "./static/media/mother.26d40790c46f25cfb6ff.jpeg",
     "static/media/carnival.png": "./static/media/carnival.1c592e254ca5b59f1fae.png",
@@ -10,17 +14,19 @@
     "static/media/varmala.png": "./static/media/varmala.654231cbeaf6259c3125.png",
     "static/media/sangeet.png": "./static/media/sangeet.1be6cf38be4eb0869f8a.png",
     "static/media/ring.png": "./static/media/ring.558d16f196cd30d0d574.png",
+    "static/media/9.jpg": "./static/media/9.caac2ba05e0ba53c061c.jpg",
+    "static/media/8.png": "./static/media/8.0b90821a4d2d8bede22e.png",
     "static/media/Groom.jpeg": "./static/media/Groom.804d9231bb28c2369691.jpeg",
     "static/media/sister.jpeg": "./static/media/sister.b9b50751fc67865fe732.jpeg",
     "static/media/daadi.jpeg": "./static/media/daadi.bc37f476edb5b1f7ec43.jpeg",
     "static/media/father.jpeg": "./static/media/father.e910639c93b48f0606e9.jpeg",
     "static/media/Bride.jpeg": "./static/media/Bride.8d9406769a6ec9682c1e.jpeg",
     "index.html": "./index.html",
-    "main.335840f2.css.map": "./static/css/main.335840f2.css.map",
-    "main.fbf7275e.js.map": "./static/js/main.fbf7275e.js.map"
+    "main.f69c76b0.css.map": "./static/css/main.f69c76b0.css.map",
+    "main.caa118c9.js.map": "./static/js/main.caa118c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.335840f2.css",
-    "static/js/main.fbf7275e.js"
+    "static/css/main.f69c76b0.css",
+    "static/js/main.caa118c9.js"
   ]
 }
