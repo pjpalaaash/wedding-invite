@@ -75,7 +75,7 @@ export const weddingData = {
     },
     {
       id: 6,
-      name: "Varamala & Wedding Ceremony",
+      name: "Varmala & Wedding Ceremony",
       date: "Wednesday, 11 March, 2026",
       time: "08:00 p.m. Onwards",
       watermark: varamala

@@ -36,7 +36,7 @@ const WishesSection = () => {
     const current = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
     current.push(entry);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(current));
-    setWishes([entry, ...wishes]);
+    setWishes((prev) => [entry, ...prev]);
   };
 
   const handleSubmit = async (e) => {
@@ -72,6 +72,9 @@ const WishesSection = () => {
     } catch (err) {
       // Fallback: save locally
       addWishLocally(entry);
+      // clear form when saved locally
+      setName('');
+      setWish('');
       // show heart animation on fallback success
       clearTimeout(timerRef.current);
       setShowHeart(true);
