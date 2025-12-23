@@ -22,12 +22,12 @@ const ContactSection = ({ invitee, firm }) => {
               </h3>
               
               <div className="space-y-4">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2">
                   <MapPin className="h-5 w-5 text-[#B8956A] mt-1 flex-shrink-0" />
                   <p className="text-gray-700 text-center">{invitee.address}</p>
                 </div>
                 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2">
                   <Phone className="h-5 w-5 text-[#B8956A] flex-shrink-0" />
                   <a href={`tel:${invitee.phone}`} className="text-gray-700 hover:text-[#B8956A] transition-colors">
                     {invitee.phone}

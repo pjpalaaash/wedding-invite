@@ -46,7 +46,7 @@ const CountdownSection = ({ weddingDate }) => {
         
         {/* Date */}
         <h3 className="text-4xl md:text-5xl font-serif italic text-gray-800 mb-12">
-          {weddingDate.day}, {weddingDate.date}<sup>nd</sup> {weddingDate.month}, {weddingDate.year}
+          {weddingDate.day}, {weddingDate.date}<sup>th</sup> {weddingDate.month}, {weddingDate.year}
         </h3>
         
         {/* Countdown Timer */}
@@ -84,7 +84,7 @@ const CountdownSection = ({ weddingDate }) => {
             </div>
             <div className="text-sm md:text-base text-gray-600 uppercase tracking-wide">
               Seconds
-            </div>
+            </div>  
           </div>
         </div>
       </div>

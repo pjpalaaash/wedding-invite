@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Card, CardContent } from './ui/card';
 import Divider from './Divider';
 
@@ -12,6 +12,10 @@ const WishesSection = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  // Heart animation state + timer
+  const [showHeart, setShowHeart] = useState(false);
+  const timerRef = useRef(null);
+
   useEffect(() => {
     // Try to fetch from server, fallback to localStorage
     fetch(API_URL)
@@ -24,6 +28,8 @@ const WishesSection = () => {
         const local = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
         setWishes(local.reverse());
       });
+    
+    return () => clearTimeout(timerRef.current);
   }, []);
 
   const addWishLocally = (entry) => {
@@ -59,9 +65,17 @@ const WishesSection = () => {
       setWishes([saved, ...wishes]);
       setName('');
       setWish('');
+      // show heart animation on success
+      clearTimeout(timerRef.current);
+      setShowHeart(true);
+      timerRef.current = setTimeout(() => setShowHeart(false), 2500);
     } catch (err) {
       // Fallback: save locally
       addWishLocally(entry);
+      // show heart animation on fallback success
+      clearTimeout(timerRef.current);
+      setShowHeart(true);
+      timerRef.current = setTimeout(() => setShowHeart(false), 2500);
     } finally {
       setLoading(false);
     }
@@ -97,12 +111,52 @@ const WishesSection = () => {
 
           {error && <p className="text-red-500">{error}</p>}
 
-          <div>
+          {/* Button wrapper is relative so the floating heart can be positioned */}
+          <div className="relative">
             <button type="submit" className="px-6 py-2 bg-[#B8956A] text-white rounded" disabled={loading}>
               {loading ? 'Sending…' : 'Send Wish'}
             </button>
+
+            {/* visually hidden live region for screen readers */}
+            {showHeart && (
+              <div className="sr-only" role="status" aria-live="polite">Your wish was sent</div>
+            )}
+
+            {/* Floating heart animation */}
+            {showHeart && (
+              <div className="floating-heart" aria-hidden="true">
+                <svg className="heart-bounce" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21s-7-4.35-9-7.17C-0.14 10.13 4.42 4 9.34 6.07 11.1 7 12 8.5 12 8.5s0.9-1.5 2.66-2.43C19.58 4 24.14 10.13 21 13.83 19 16.65 12 21 12 21z" fill="#E02424"/>
+                </svg>
+              </div>
+            )}
           </div>
         </form>
+
+        {/* Animation styles */}
+        <style>{`
+          .floating-heart {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 3.25rem;
+            animation: floatUp 2.2s ease forwards;
+            pointer-events: none;
+            z-index: 50;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+          }
+          @keyframes floatUp {
+            0% { transform: translate(-50%, 0) scale(0.9); opacity: 1; }
+            20% { transform: translate(-50%, -18px) scale(1.05); opacity: 1; }
+            100% { transform: translate(-50%, -90px) scale(0.8); opacity: 0; }
+          }
+          .heart-bounce { animation: pop 0.35s ease; }
+          @keyframes pop {
+            0% { transform: scale(0.7); }
+            60% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+          }
+        `}</style>
 
         {/* <div className="grid gap-4">
           {wishes.length === 0 && <p className="text-gray-600">No wishes yet — be the first to send one!</p>}

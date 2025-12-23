@@ -2,16 +2,38 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
 import Divider from './Divider';
+import img1 from '../data/images/gallery/1.png'
+// import img2 from '../data/images/gallery/13.JPG'
+import img3 from '../data/images/gallery/3.png'
+// import img4 from '../data/images/gallery/4.png'
+// import img5 from '../data/images/gallery/5.png'
+import img6 from '../data/images/gallery/14.JPG'
+import img7 from '../data/images/gallery/7.png'
+import img8 from '../data/images/gallery/8.png'
+import img9 from '../data/images/gallery/9.jpg'
 
-const GallerySection = ({ images }) => {
+const GallerySection = ({ images = [] }) => {
+  // add your default images here (put them in public/images/)
+  const defaultImages = [
+    img1,
+    img3,
+    img6, 
+    img7,
+    img8,
+    img9
+  ];
+
+  // use passed images if provided, otherwise fallback to defaultImages
+  const imageList = images.length ? defaultImages : images;
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
+    setCurrentIndex((prev) => (prev + 1) % imageList.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    setCurrentIndex((prev) => (prev - 1 + imageList.length) % imageList.length);
   };
 
   const goToSlide = (index) => {
@@ -34,7 +56,7 @@ const GallerySection = ({ images }) => {
           {/* Main Image */}
           <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden shadow-2xl">
             <img
-              src={images[currentIndex]}
+              src={imageList[currentIndex]}
               alt={`Wedding moment ${currentIndex + 1}`}
               className="w-full h-full object-cover transition-opacity duration-500"
             />
@@ -59,7 +81,7 @@ const GallerySection = ({ images }) => {
           
           {/* Dots Indicator */}
           <div className="flex justify-center gap-2 mt-6">
-            {images.map((_, index) => (
+            {imageList.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
@@ -76,7 +98,7 @@ const GallerySection = ({ images }) => {
         
         {/* Thumbnail Grid */}
         <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mt-8 max-w-5xl mx-auto">
-          {images.map((image, index) => (
+          {imageList.map((image, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
