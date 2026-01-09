@@ -5,7 +5,7 @@ import { Volume2, VolumeX } from 'lucide-react';
  * Audio Player Control Component
  * Allows users to control background music playback and volume
  */
-const AudioPlayer = ({ play, pause, setVolume, isPlaying, requiresUserAction }) => {
+const AudioPlayer = ({ play, pause, setVolume, isPlaying }) => {
   const [volume, setVolumeLocal] = useState(50);
   const [showControls, setShowControls] = useState(false);
 
@@ -53,24 +53,6 @@ const AudioPlayer = ({ play, pause, setVolume, isPlaying, requiresUserAction }) 
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300 w-8 text-right">
               {volume}%
             </span>
-          </div>
-        </div>
-      )}
-
-      {/* Automatic prompt when browser blocked autoplay */}
-      {requiresUserAction && (
-        <div className="fixed inset-0 z-60 flex items-center justify-center bg-black/40">
-          <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg max-w-sm text-center">
-            <h3 className="text-lg font-semibold mb-2">Enable Music</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">Tap anywhere or press the button below to enable background music.</p>
-            <div className="flex justify-center">
-              <button
-                onClick={() => play()}
-                className="px-4 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-lg font-semibold"
-              >
-                Enable Music
-              </button>
-            </div>
           </div>
         </div>
       )}

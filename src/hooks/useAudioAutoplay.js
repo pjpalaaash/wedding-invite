@@ -10,7 +10,6 @@ export const useAudioAutoplay = (audioUrl, shouldPlay = true) => {
   const hasInteracted = useRef(false);
 
   const [isPlaying, setIsPlaying] = useState(false);
-  const [requiresUserAction, setRequiresUserAction] = useState(false);
 
   useEffect(() => {
     if (!audioUrl) return;
@@ -31,11 +30,9 @@ export const useAudioAutoplay = (audioUrl, shouldPlay = true) => {
       try {
         await audio.play();
         hasInteracted.current = true;
-        setRequiresUserAction(false);
       } catch (err) {
         // autoplay blocked
         console.log('Autoplay blocked:', err?.message || err);
-        setRequiresUserAction(true);
       }
     };
 
@@ -54,7 +51,6 @@ export const useAudioAutoplay = (audioUrl, shouldPlay = true) => {
       try {
         await audio.play();
         hasInteracted.current = true;
-        setRequiresUserAction(false);
       } catch (err) {
         console.log('Error playing audio on user gesture:', err?.message || err);
       }
@@ -107,7 +103,6 @@ export const useAudioAutoplay = (audioUrl, shouldPlay = true) => {
     getCurrentTime: () => audioRef.current?.currentTime || 0,
     getDuration: () => audioRef.current?.duration || 0,
     isPlaying,
-    requiresUserAction,
   };
 };
 
