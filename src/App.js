@@ -14,7 +14,9 @@ import Footer from "./components/Footer";
 import WishesSection from "./components/WishesSection";
 import FamiliesSection from "./components/FamiliesSection";
 import FamilyPage from "./components/FamilyPage";
+import AudioPlayer from "./components/AudioPlayer";
 import { weddingData } from "./data/mock";
+import useAudioAutoplay from "./hooks/useAudioAutoplay";
 
 const Home = () => {
   useEffect(() => {
@@ -48,8 +50,12 @@ const Home = () => {
 };
 
 function App() {
+  // Initialize audio once at app level and pass controls to the player
+  const audio = useAudioAutoplay('/music/background-music.mp3', true);
+
   return (
     <div className="App">
+      <AudioPlayer {...audio} />
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />

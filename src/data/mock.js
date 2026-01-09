@@ -3,7 +3,13 @@ import motherPic from "../data/images/groomfamily/mother.jpeg"
 import fatherPic from "../data/images/groomfamily/father.jpeg"
 import sisterPic from "../data/images/groomfamily/sister.jpeg"
 import grandmother from "../data/images/groomfamily/daadi.jpeg"
+// ****************************************************************************
 
+import bridemother from "../data/images/bridefamily/mother.jpeg"
+import bridefather from "../data/images/bridefamily/father.jpeg"
+import bridebrother from "../data/images/bridefamily/brother.jpeg" 
+// import bridegrandmother from "../data/images/bridefamily/daadi.jpeg"
+// ****************************************************************************
 import mehendi from "../data/images/ceremony/mehendi.png"
 import haldi from "../data/images/ceremony/haldi.png"
 import ring from "../data/images/ceremony/ring.png"
@@ -43,42 +49,66 @@ export const weddingData = {
       name: "Mehendi Ceremony",
       date: "Tuesday, 09 March, 2026",
       time: "05:00 p.m. onwards",
-      watermark: mehendi
+      watermark: mehendi,
+      dressCode: {
+        name: "Mehendi Dress Code",
+        colors: [ "#32CD32", "#00CED1"]
+      }
     },
     {
       id: 2,
       name: "Haldi Ceremony",
       date: "Tuesday, 10 March, 2026",
       time: "11:30 a.m. Onwards",
-      watermark: haldi
+      watermark: haldi,
+      dressCode: {
+        name: "Haldi Dress Code",
+        colors: ["#FFD700", "#FFFF00", "#FFA500", ]
+      }
     },
     {
       id: 3,
       name: "Ring Ceremony",
       date: "Tuesday, 10 March, 2026",
       time: "07:00 p.m. Onwards",
-      watermark: ring
+      watermark: ring,
+      dressCode: {
+        name: "Ring Ceremony Dress Code",
+        colors: ["#FF69B4", "#FFB6C1", "#FFC0CB", "#FF1493", "#FF00FF"]
+      }
     },
     {
       id: 4,
       name: "Sangeet Night",
       date: "Tuesday, 10 March, 2026",
       time: "08:00 p.m. Onwards",
-      watermark: sangeet
+      watermark: sangeet,
+      dressCode: {
+        name: "Sangeet Dress Code",
+        colors: ["#8B0000", "#ffffffff", "#FF1493", "#0d0214ff", "#9932CC"]
+      }
     },
     {
       id: 5,
       name: "Pool Party/Carnival",
       date: "Wednesday, 11 March, 2026",
       time: "12:00 p.m. Onwards",
-      watermark: carnival
+      watermark: carnival,
+      dressCode: {
+        name: "Pool Party Dress Code",
+        colors: ["#00CED1", "#1E90FF", "#87CEEB", "#7FFFD4", "#40E0D0"]
+      }
     },
     {
       id: 6,
       name: "Varmala & Wedding Ceremony",
       date: "Wednesday, 11 March, 2026",
       time: "08:00 p.m. Onwards",
-      watermark: varamala
+      watermark: varamala,
+      dressCode: {
+        name: "Wedding Ceremony Dress Code",
+        colors: ["#8B4513", "#D2B48C", "#FFD700", "#DAA520", "#B8860B"]
+      }
     }
   ],
   gallery: [
@@ -101,10 +131,10 @@ export const weddingData = {
       { name: "Mrs. Kamla Jaiswal", photo: grandmother, relation: "Grandmother" }
     ],
     bride: [
-      { name: "Mr. Kamlesh Chouksey", photo: "https://images.unsplash.com/photo-1531123414780-f7ef0056c7d7?w=800&q=80", relation: "Father" },
-      { name: "Mrs. Sapna Chouksey", photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80", relation: "Mother" },
-      { name: "Mr. Abhinav Chouksey", photo: "https://images.unsplash.com/photo-1545996124-1a3c1be6f1b4?w=800&q=80", relation: "Brother" },
-      { name: "Mrs. Seema Chouksey", photo: "https://images.unsplash.com/photo-1544006659-f0b21884ce1d?w=800&q=80", relation: "Grandmother" }
+      { name: "Mr. Kamlesh Chouksey", photo: bridefather, relation: "Father" },
+      { name: "Mrs. Sapna Chouksey", photo: bridemother, relation: "Mother" },
+      { name: "Mr. Abhinav Chouksey", photo: bridebrother, relation: "Brother" },
+      // { name: "Mrs. Seema Chouksey", photo: bridegrandmother, relation: "Grandmother" }
     ]
   },
   invitee: {
