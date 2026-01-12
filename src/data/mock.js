@@ -27,7 +27,7 @@ export const weddingData = {
     groomGrandfather: "Late Badri Prasad Jaiswal",
     groomCity: "New Shastri Nagar, Jabalpur (MP)",
     brideFather: "Kamlesh Chouksey",
-    brideGrandfather: "Shrikant Chouksey",
+    brideGrandfather: "Late Ramjas Chouksey",
     brideCity: "Bhita, Jabalpur (MP)"
   },
   weddingDate: {
