@@ -38,10 +38,10 @@ export const weddingData = {
     targetDate: "2026-03-11T19:00:00+05:30"
   },
   venue: {
-    name: "Narmada Vatika Resort",
-    location: "Near Pavan Sthapak Eye Hospital, Jabalpur,(M.P.)",
-    fullAddress: "Tilwara Ghat Chargawan Road, Jabalpur (M.P.)",
-    mapUrl: "https://maps.app.goo.gl/MReCpBXq311tdk5GA"
+    name: "Sea World Resort & Water Park",
+    location: "Jabalpur Bhopal Highway, Bhedaghat Road Tewar, Jabalpur (M.P.)",
+    fullAddress: "Sea World Resort & Water Park, Bhedaghat Road Tewar, Jabalpur (M.P.)",
+    mapUrl: "https://maps.app.goo.gl/sjWjxKQK7KRF11WU7"
   },
   events: [
     {

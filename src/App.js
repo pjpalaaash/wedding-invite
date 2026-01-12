@@ -51,7 +51,8 @@ const Home = () => {
 
 function App() {
   // Initialize audio once at app level and pass controls to the player
-  const audio = useAudioAutoplay('/music/background-music.mp3', true);
+  const audioPath = `${process.env.PUBLIC_URL}/music/background-music.mp3`;
+  const audio = useAudioAutoplay(audioPath, true);
 
   return (
     <div className="App">
