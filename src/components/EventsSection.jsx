@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from './ui/card';
 import Divider from './Divider';
 
@@ -6,12 +6,23 @@ const EventsSection = ({ events }) => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   const openDressCodeModal = (event) => {
-    setSelectedEvent(event);
+    // Only open modal if the event has a dress code
+    if (event.dressCode) {
+      setSelectedEvent(event);
+    }
   };
 
   const closeDressCodeModal = () => {
     setSelectedEvent(null);
   };
+
+  const [localDescription, setLocalDescription] = useState('');
+
+  useEffect(() => {
+    if (selectedEvent) {
+      setLocalDescription(selectedEvent.dressCode?.description || '');
+    }
+  }, [selectedEvent]);
 
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-[#faf8f5] to-white">
@@ -29,7 +40,9 @@ const EventsSection = ({ events }) => {
           {events.map((event) => (
             <Card 
               key={event.id} 
-              className="border-2 border-[#B8956A]/20 bg-[#f8d88f] shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer"
+              className={`border-2 border-[#B8956A]/20 bg-[#f8d88f] shadow-lg hover:shadow-xl transition-all duration-300 ${
+                event.dressCode ? 'hover:scale-105 cursor-pointer' : 'cursor-default'
+              }`}
               onClick={() => openDressCodeModal(event)}
             >
               
@@ -50,9 +63,11 @@ const EventsSection = ({ events }) => {
                   <p className="text-sm font-small text-[#333333] tracking-wide">
                     {event.time}
                   </p>
-                  <p className="text-xs font-light text-[#333333] tracking-wide">
-                    Tap for Dress Code
-                  </p>
+                  {event.dressCode && (
+                    <p className="text-xs font-light text-[#333333] tracking-wide">
+                      Tap for Dress Code
+                    </p>
+                  )}
                 </div>
               </CardContent>
             </Card>
@@ -93,21 +108,52 @@ const EventsSection = ({ events }) => {
               <div>
                 <p className="text-sm font-medium text-[#5D4037] mb-4">Suggested Colors</p>
                 <div className="flex justify-center gap-3 flex-wrap">
-                  {selectedEvent.dressCode.colors.map((color, index) => (
-                    <div
-                      key={index}
-                      className="relative group"
-                      title={color}
-                    >
-                      <div
-                        className="w-16 h-16 rounded-lg shadow-md border-2 border-[#B8956A]/30 transition-all duration-300 hover:shadow-lg hover:scale-110"
-                        style={{ backgroundColor: color }}
-                      />
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-800 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                        {color}
+                  {selectedEvent.dressCode.colors.map((colorItem, index) => {
+                    const isString = typeof colorItem === 'string';
+                    const value = isString ? colorItem : colorItem.value;
+
+                    return (
+                      <div key={index} className="flex flex-col items-center group relative">
+                        <div
+                          className="w-16 h-16 rounded-lg shadow-md border-2 border-[#B8956A]/30 transition-all duration-300 hover:shadow-lg hover:scale-110"
+                          style={{ backgroundColor: value }}
+                          title={value}
+                        />
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
+                </div>
+
+                {/* Dress Code Description (editable locally) */}
+                <div className="mt-4 text-left">
+                  {/* <p className="text-sm font-medium text-[#5D4037] mb-2">Dress Code Note</p> */}
+                  <p className="w-fit mx-auto text-sm font-medium text-[#5D4037] mb-2">
+                  Dress Code Note
+                  </p>
+                  <textarea
+                    value={localDescription}
+                    onChange={(e) => setLocalDescription(e.target.value)}
+                    placeholder="Add a short dress code note or description..."
+                    className="w-full border border-[#e5e7eb] rounded-md p-2 text-sm text-[#4A3B2C] resize-y"
+                    rows={3}
+                  />
+                  <div className="flex gap-2 justify-end mt-2">
+                    {/* <button
+                      onClick={() => {
+                        // update local selectedEvent (in-memory only)
+                        setSelectedEvent((prev) => prev ? { ...prev, dressCode: { ...prev.dressCode, description: localDescription } } : prev);
+                      }}
+                      className="px-3 py-1 bg-[#B8956A] text-white rounded-md text-sm hover:bg-[#9d7d5c] transition-colors"
+                    >
+                      Save Note
+                    </button> */}
+                    {/* <button
+                      onClick={() => setLocalDescription(selectedEvent.dressCode?.description || '')}
+                      className="px-3 py-1 bg-gray-100 text-[#4A3B2C] rounded-md text-sm hover:bg-gray-200 transition-colors"
+                    >
+                      Reset
+                    </button> */}
+                  </div>
                 </div>
               </div>
 

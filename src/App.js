@@ -8,7 +8,7 @@ import EventsSection from "./components/EventsSection";
 import KnowUsSection from "./components/KnowUsSection";
 import GallerySection from "./components/GallerySection";
 import VenueSection from "./components/VenueSection";
-import RSVPSection from "./components/RSVPSection";
+// import RSVPSection from "./components/RSVPSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import WishesSection from "./components/WishesSection";
@@ -38,7 +38,7 @@ const Home = () => {
       <FamiliesSection families={weddingData.familiesDetailed} />
       <GallerySection images={weddingData.gallery} />
       <VenueSection venue={weddingData.venue} />
-      <RSVPSection families={weddingData.families} />
+      {/* <RSVPSection families={weddingData.families} /> */}
       <ContactSection 
         invitee={weddingData.invitee}
         firm={weddingData.firm}
