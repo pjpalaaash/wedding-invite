@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.15622fec.css",
-    "main.js": "./static/js/main.3cc01e78.js",
+    "main.css": "./static/css/main.4edef871.css",
+    "main.js": "./static/js/main.3a1dfafe.js",
     "static/media/3.png": "./static/media/3.3449713a5cf9e52088a6.png",
     "static/media/7.png": "./static/media/7.032092868605603a0636.png",
     "static/media/14.JPG": "./static/media/14.adde2d73a884ba0ca1a3.JPG",
     "static/media/1.png": "./static/media/1.8ee26e432c01d02fae08.png",
     "static/media/6.png": "./static/media/6.f5387257a76415b6fd58.png",
+    "static/media/tilak.png": "./static/media/tilak.5da2ff57646bbf5ba6ed.png",
+    "static/media/mata.png": "./static/media/mata.c66a9421a9b9a1a7a67a.png",
     "static/media/mother.jpeg": "./static/media/mother.3c37591098bcf8532df8.jpeg",
     "static/media/carnival.png": "./static/media/carnival.1c592e254ca5b59f1fae.png",
     "static/media/mehendi.png": "./static/media/mehendi.fce3bc633f9aaf78da98.png",
@@ -19,15 +21,17 @@
     "static/media/Groom.jpeg": "./static/media/Groom.804d9231bb28c2369691.jpeg",
     "static/media/sister.jpeg": "./static/media/sister.b9b50751fc67865fe732.jpeg",
     "static/media/brother.jpeg": "./static/media/brother.cc2d87fe90754617ba02.jpeg",
+    "static/media/Bride.jpeg": "./static/media/Bride.35f26ea67300da059ce7.jpeg",
+    "static/media/nani.jpeg": "./static/media/nani.9ac4fa7a9586c368389d.jpeg",
     "static/media/daadi.jpeg": "./static/media/daadi.bc37f476edb5b1f7ec43.jpeg",
     "static/media/father.jpeg": "./static/media/father.2d0d4aaadcfa37368a76.jpeg",
-    "static/media/Bride.jpeg": "./static/media/Bride.8d9406769a6ec9682c1e.jpeg",
+    "static/media/dadi.jpeg": "./static/media/dadi.83b8d7dc6a49963c33c8.jpeg",
     "index.html": "./index.html",
-    "main.15622fec.css.map": "./static/css/main.15622fec.css.map",
-    "main.3cc01e78.js.map": "./static/js/main.3cc01e78.js.map"
+    "main.4edef871.css.map": "./static/css/main.4edef871.css.map",
+    "main.3a1dfafe.js.map": "./static/js/main.3a1dfafe.js.map"
   },
   "entrypoints": [
-    "static/css/main.15622fec.css",
-    "static/js/main.3cc01e78.js"
+    "static/css/main.4edef871.css",
+    "static/js/main.3a1dfafe.js"
   ]
 }
